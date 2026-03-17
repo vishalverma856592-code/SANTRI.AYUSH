@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Sitapur Educational Institute</title>
+    <!-- Fonts, CSS, Tailwind -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: { 900: '#1e3a8a', 600: '#2563eb' } }, fontFamily: { sans: ['"Open Sans"', 'sans-serif'], heading: ['"Poppins"', 'sans-serif'] } } } }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+
+    <nav class="bg-white/90 dark:bg-gray-900/90 sticky top-0 z-50 shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3"><h1 class="font-heading font-bold text-xl text-primary-900 dark:text-white">SEI</h1></a>
+            <div class="hidden lg:flex space-x-6">
+                <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">Home</a>
+                <a href="gallery.html" class="text-primary-600 font-bold border-b-2 border-primary-600 pb-1">Gallery</a>
+                <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-primary-900 text-white py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Photo Gallery</h1>
+        <p class="text-lg text-primary-200">Glimpses of life, events, and infrastructure at SEI.</p>
+    </div>
+
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Gallery Item Prototype -->
+                <script>
+                    for(let i=1; i<=6; i++) {
+                        document.write(`
+                        <div class="relative overflow-hidden rounded-2xl group cursor-pointer aspect-[4/3] shadow-sm gallery-item" data-src="/SCHOOL/${i}.webp">
+                            <img src="/SCHOOL/${i}.webp" alt="Gallery ${i}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&w=800&q=80'">
+                            <div class="absolute inset-0 bg-primary-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <i class="fas fa-search-plus text-white text-3xl transform scale-50 group-hover:scale-100 transition-transform duration-300"></i>
+                            </div>
+                        </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[110] bg-black/95 hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white text-4xl hover:text-gray-400 transition-colors">&times;</button>
+        <img id="lightbox-img" src="" alt="Preview" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+    </div>
+
+    <footer class="bg-gray-900 text-white py-10 text-center"><p>&copy; Sitapur Educational Institute.</p></footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission | Sitapur Educational Institute</title>
+    <!-- Fonts, CSS, Tailwind -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 900: '#1e3a8a' }, accent: {500: '#f59e0b'} }, fontFamily: { sans: ['"Open Sans"', 'sans-serif'], heading: ['"Poppins"', 'sans-serif'] } } }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+
+    <nav class="bg-white/90 dark:bg-gray-900/90 sticky top-0 z-50 shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3"><h1 class="font-heading font-bold text-xl text-primary-900 dark:text-white">SEI</h1></a>
+            <div class="hidden lg:flex space-x-6 items-center">
+                <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">Home</a>
+                <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">About</a>
+                <a href="admission.html" class="text-primary-600 font-bold border-b-2 border-primary-600 pb-1">Admission</a>
+                <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-primary-900 text-white py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Admissions Open 2024-25</h1>
+        <p class="text-lg text-primary-200">Start your child's journey to excellence today.</p>
+    </div>
+
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold mb-8 text-gray-900 dark:text-white">Admission Process</h2>
+            
+            <div class="space-y-8">
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Registration</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Obtain the prospectus and registration form from the school office or download it online. Submit the duly filled form along with required documents.</p>
+                    </div>
+                </div>
+                <!-- Other Steps... -->
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Interaction / Entrance Test</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Registered applicants will be called for an informal interaction (Kindergarten) or a written assessment (Grade I onwards).</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Admission Confirmation</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Upon successful clearance, admission is confirmed by submitting the admission fee and original transfer certificate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 text-center">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ready to Apply?</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6">Contact our admissions office or fill out the enquiry form online.</p>
+                <a href="contact.html" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-full font-bold transition-all inline-block shadow-md hover:shadow-lg transform hover:-translate-y-1">Enquire Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 text-center"><p>&copy; Sitapur Educational Institute.</p></footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

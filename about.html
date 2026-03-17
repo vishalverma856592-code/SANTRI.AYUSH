@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Sitapur Educational Institute</title>
+    <meta name="description" content="Learn about the history, vision, and mission of Sitapur Educational Institute.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                        secondary: { 500: '#a855f7', 600: '#9333ea', 700: '#7e22ce' },
+                        accent: { 500: '#f59e0b', 600: '#d97706' }
+                    },
+                    fontFamily: { sans: ['"Open Sans"', 'sans-serif'], heading: ['"Poppins"', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Top Header Bar -->
+    <div class="bg-primary-900 text-white text-sm py-2 px-4 hidden md:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex space-x-6 items-center">
+                <a href="tel:+919628433337" class="hover:text-primary-200 transition-colors flex items-center gap-2"><i class="fas fa-phone-alt"></i> 096284 33337</a>
+                <a href="mailto:sei.school@yahoo.com" class="hover:text-primary-200 transition-colors flex items-center gap-2"><i class="fas fa-envelope"></i> sei.school@yahoo.com</a>
+            </div>
+            <div class="flex space-x-4 items-center">
+                <a href="#" class="hover:text-primary-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-primary-200"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-primary-200"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary-600 to-secondary-500 flex items-center justify-center text-white font-heading font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">SEI</div>
+                        <div>
+                            <h1 class="font-heading font-bold text-xl md:text-2xl text-primary-900 dark:text-white leading-tight">Sitapur Educational</h1>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wider">INSTITUTE</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-primary-600 dark:text-primary-400 font-semibold border-b-2 border-primary-600 pb-1">About</a>
+                    <a href="academics.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Academics</a>
+                    <a href="rules.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Rules & Regulations</a>
+                    <a href="gallery.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Contact</a>
+                    <button id="theme-toggle" class="text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2.5">
+                        <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
+                        <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                    </button>
+                    <a href="admission.html" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium shadow-md">Apply Now</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden items-center gap-4">
+                    <button id="theme-toggle-mobile" class="text-gray-500 p-2.5 rounded-lg"><i id="theme-toggle-dark-icon-mobile" class="hidden fas fa-moon"></i><i id="theme-toggle-light-icon-mobile" class="hidden fas fa-sun"></i></button>
+                    <button id="mobile-menu-btn" class="text-gray-600 p-2"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-t absolute w-full shadow-xl">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 dark:text-gray-300">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-primary-600 font-semibold bg-primary-50 dark:bg-gray-800 rounded-md">About</a>
+                <!-- Other links -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-primary-900 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20"><img src="/SCHOOL/2.webp" class="w-full h-full object-cover"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">About Us</h1>
+            <p class="text-lg text-primary-200">Discover our history, vision, and the core team behind our excellence.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+                <div class="reveal-left">
+                    <h2 class="text-3xl font-heading font-bold mb-6 text-gray-900 dark:text-white">Our Vision & Mission</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        At Sitapur Educational Institute, our vision is to create a dynamic learning environment where students can discover their true potential. We aim to foster academic excellence alongside moral and spiritual growth.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Our mission is to provide world-class infrastructure, experienced faculty, and a holistic curriculum that prepares the next generation of global leaders, deeply rooted in Indian values.
+                    </p>
+                </div>
+                <div class="reveal-right">
+                    <img src="/SCHOOL/2.webp" alt="Our Campus" class="rounded-2xl shadow-xl">
+                </div>
+            </div>
+            
+            <div class="reveal-up text-center max-w-3xl mx-auto mb-16">
+                <hr class="mb-16 border-gray-200 dark:border-gray-800">
+                <h2 class="text-3xl font-heading font-bold mb-6 text-gray-900 dark:text-white">A Legacy of Excellence</h2>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Founded by visionary leaders Harish Choudhary and Om Prakash Singhania, the institution has continuously pushed the boundaries of modern education. We believe in providing personalized attention and utilizing modern technology to impart education that leaves a lasting impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer snippet -->
+    <footer class="bg-gray-900 text-white py-10 text-center">
+        <p>&copy; <span id="year"></span> Sitapur Educational Institute. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
